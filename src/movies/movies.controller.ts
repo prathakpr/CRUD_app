@@ -1,7 +1,9 @@
 import { Controller, Get, Post, Put, Delete, Param } from '@nestjs/common';
+import { MoviesService } from './movies.service';
 
 @Controller('movies')
 export class MoviesController {
+    constructor(private moviesService: MoviesService){}
     @Post()
     create() {
     return "create a new movie endpoint";
