@@ -6,11 +6,13 @@ export class MoviesController {
     constructor(private moviesService: MoviesService){}
     @Post()
     create() {
-    return "create a new movie endpoint";
+        return this.moviesService.create("Bahubali");
+    //return "create a new movie endpoint";
     }
     @Get()
     findAll() {
-    return "find all movie endpoint";
+        return this.moviesService.findAll();
+    //return "find all movie endpoint";
     }
     @Get(":id")
     findOne() {
