@@ -1,8 +1,16 @@
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
+import { Movie } from './entities/movie.entity'; // Import the Movie entity
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+
 
 @Injectable()
 export class MoviesService {
     // local DB
+    constructor(
+        @InjectRepository(Movie) 
+        private movieRepository: Repository<Movie>, //we will use movieRepository for our CRUD operations
+      ) {}
    // local array
     private readonly movies = [];
     create(movie : string) {
