@@ -1,3 +1,51 @@
+# Movie and Song CRUD Application with PostgreSQL and MongoDB
+
+## Project Overview
+
+This project is a **CRUD application** developed using **NestJS** to manage movie and song data. It integrates both **PostgreSQL** (via TypeORM) and **MongoDB** (via Mongoose), enabling CRUD operations on both relational and NoSQL databases.
+
+The **Movies module** utilizes **PostgreSQL** to manage structured data with relational integrity, while the **Songs module** uses **MongoDB** for flexible, schema-less storage of song data.
+
+## Key Features
+
+### Movies Module (PostgreSQL)
+- Manage movie details such as title, director, release date, genres, and rating.
+- Perform CRUD operations on movies:
+  - `POST /movies`: Create a new movie.
+  - `GET /movies`: Fetch all movies.
+  - `GET /movies/:id`: Fetch a movie by its ID.
+  - `PUT /movies/:id`: Update an existing movie.
+  - `DELETE /movies/:id`: Delete a movie.
+- Uses **PostgreSQL** for structured data with relational integrity.
+
+### Songs Module (MongoDB)
+- Manage song details such as title, artist, genre, release date, and lyrics.
+- Perform CRUD operations on songs:
+  - `POST /songs`: Create a new song.
+  - `GET /songs`: Fetch all songs.
+  - `GET /songs/:id`: Fetch a song by its ID.
+  - `PUT /songs/:id`: Update an existing song.
+  - `DELETE /songs/:id`: Delete a song.
+- Uses **MongoDB** for flexible, schema-less storage of song data.
+
+## Database Integration
+- **PostgreSQL** is used for the **Movies** module to store structured data with relational integrity.
+- **MongoDB** is used for the **Songs** module, providing flexibility in handling semi-structured data such as lyrics and multiple artists.
+
+## Technologies Used:
+- **NestJS** for the backend framework.
+- **PostgreSQL** for the Movies module.
+- **MongoDB** for the Songs module.
+- **TypeORM** for PostgreSQL integration.
+- **Mongoose** for MongoDB integration.
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/prathakpr/CRUD_app.git
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
