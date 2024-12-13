@@ -4,10 +4,13 @@ import { AppService } from './app.service';
 import { MoviesModule } from './movies/movies.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Movie } from './movies/entities/movie.entity'; // Import the Movie entity
+import { SongsModule } from './songs/songs.module';
 
 @Module({
   imports: [
     MoviesModule,
+    SongsModule,
+    // PostgreSQL configuration
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
